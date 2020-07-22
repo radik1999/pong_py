@@ -7,7 +7,7 @@ from prototype import GamePrototype
 from gameType import *
 
 root = Tk()
-root.geometry('700x400+350+150')
+root.geometry('500x300+350+150')
 
 GameType(root)
 # StartScreen(root, width=700, height=400)

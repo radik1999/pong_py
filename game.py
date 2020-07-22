@@ -48,7 +48,7 @@ class Game(GamePrototype):
 
 	def main_menu(self):
 		self.desk.destroy()
-		GameType(self.master, self.width, self.height)
+		GameType(self.master, self.width, self.height, self.ball.color, self.player1.color)
 
 	def new_game(self):
 		self.desk.destroy()

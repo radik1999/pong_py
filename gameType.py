@@ -5,16 +5,16 @@ from startscreen import *
 from theme import Theme
 
 class GameType(Frame):
-    def __init__(self, parent=None, width=500, height=300, **configs):
+    def __init__(self, parent=None, width=500, height=300, bcolor='blue', rcolor='red', **configs):
         super().__init__(parent, width=width, height=height, **configs)
         self.width = width
         self.height = height
-        self.make_widgets()
+        self.make_widgets(bcolor, rcolor)
 
-    def make_widgets(self):
+    def make_widgets(self, bcolor, rcolor):
         self.pack()
 
-        self.theme = Theme(self)
+        self.theme = Theme(self, bcolor=bcolor, rcolor=rcolor)
         self.theme.pack(side=TOP)
 
         self.game_type = BooleanVar() # what type of game: solo - with computer or with someone
@@ -27,7 +27,6 @@ class GameType(Frame):
 
         self.start = Button(self, text='Start', command=self.start_action)
         self.start.pack(side=TOP)
-
 
     def start_action(self):
         self.destroy()
