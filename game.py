@@ -58,7 +58,7 @@ class Game(GamePrototype):
 		self.ball.move_to_center()
 		self.player1.move_to_center()
 		self.player2.move_to_center()
-		if plr.points == 2:
+		if plr.points == 10:
 			self.end_report(plr)
 			return 0
 		if wait:
